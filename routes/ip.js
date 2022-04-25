@@ -2,7 +2,7 @@ var express = require("express");
 var router = express.Router();
 const fetch = require("cross-fetch");
 
-/* GET web server external ip address. */
+/* GET Dyno Web App external ip address. */
 router.get("/", async function (req, res, next) {
 	const url = "https://api.ipify.org?format=json";
 	const myHost = "calm-tor-51704.herokuapp.com";

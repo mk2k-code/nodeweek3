@@ -3,14 +3,7 @@ var router = express.Router();
 const Post = require("../models/modPost");
 const postsControllers = require("../controllers/posts");
 
-/* GET users listing. */
-// router.get('/', async function(req, res, next) {
-//   const post =await Post.find()
-//   res.status(200).json({
-//     "posts":post
-//   })
-// });
-// posts = [];
+
 router.get("/", function (req, res, next) {
 	postsControllers.getPosts(req, res);
 });

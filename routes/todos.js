@@ -3,7 +3,6 @@ const router = express.Router();
 const Post = require("../models/modTodo");
 const todosControllers = require("../controllers/todos");
 
-/* GET users listing. */
 router.get("/", function (req, res, next) {
 	todosControllers.getTodos(req, res);
 });
