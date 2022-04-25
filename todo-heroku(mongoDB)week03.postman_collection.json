@@ -1,0 +1,456 @@
+{
+	"info": {
+		"_postman_id": "054ecba8-9286-4019-a6a9-0d954a2febfe",
+		"name": "todo-heroku(mongoDB)week03",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "check herokuapp ip address",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://calm-tor-51704.herokuapp.com/ip",
+					"protocol": "http",
+					"host": [
+						"calm-tor-51704",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"ip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查詢所有posts ***",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://calm-tor-51704.herokuapp.com/posts",
+					"protocol": "http",
+					"host": [
+						"calm-tor-51704",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查詢單筆post ***",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://calm-tor-51704.herokuapp.com/posts/62652b96bfb6101bb1aabcf6",
+					"protocol": "http",
+					"host": [
+						"calm-tor-51704",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"62652b96bfb6101bb1aabcf6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查詢所有代辦",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://calm-tor-51704.herokuapp.com/todos",
+					"protocol": "http",
+					"host": [
+						"calm-tor-51704",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OPTIONS",
+			"request": {
+				"method": "OPTIONS",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://calm-tor-51704.herokuapp.com/",
+					"protocol": "http",
+					"host": [
+						"calm-tor-51704",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增單筆post ***",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\r\n            \"name\": \"Cornell Broadbear\",\r\n            \"image\": \"http://dummyimage.com/197x100.png/dddddd/000000\",\r\n            \"content\": \"at nibh in hac habitasse platea dum felis sed interdum\",\r\n            \"type\": \"group\",\r\n            \"tags\": [\r\n                \"謎因\",\r\n                \"電影\",\r\n                \"感情\"\r\n            ]\r\n        }\r\n   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://calm-tor-51704.herokuapp.com/posts",
+					"protocol": "http",
+					"host": [
+						"calm-tor-51704",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增單筆代辦",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"heroku: 今天20:00要上課.....今天20:00要上課\"\r\n}\r\n   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://calm-tor-51704.herokuapp.com/todos",
+					"protocol": "http",
+					"host": [
+						"calm-tor-51704",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增單筆代辦 -err",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titl\":\"bbbbb\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://calm-tor-51704.herokuapp.com/todos",
+					"protocol": "http",
+					"host": [
+						"calm-tor-51704",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增單筆代辦 -err2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"bbbbb\"\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://calm-tor-51704.herokuapp.com/todos",
+					"protocol": "http",
+					"host": [
+						"calm-tor-51704",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除所有posts ****",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://calm-tor-51704.herokuapp.com/posts",
+					"protocol": "http",
+					"host": [
+						"calm-tor-51704",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除所有代辦",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://calm-tor-51704.herokuapp.com/todos",
+					"protocol": "http",
+					"host": [
+						"calm-tor-51704",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除單筆post ***",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://calm-tor-51704.herokuapp.com/posts/626205299c277ba45326c691",
+					"protocol": "http",
+					"host": [
+						"calm-tor-51704",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"626205299c277ba45326c691"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除單筆代辦",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://calm-tor-51704.herokuapp.com/todos/6252f083c2cc0ddcd464109a",
+					"protocol": "http",
+					"host": [
+						"calm-tor-51704",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos",
+						"6252f083c2cc0ddcd464109a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新單筆post ***",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n\r\n        {\r\n            \"name\": \"xxxxxxxxxxxxxxxxxxx\",\r\n            \"image\": \"http://dummyimage.com/197x100.png/dddddd/000000\",\r\n            \"content\": \"xxxxxxxxxxxxxxxxxx\",\r\n            \"type\": \"group\",\r\n            \"likes\": 9999,\r\n            \"comments\": 8888,\r\n            \"tags\": [\r\n                \"謎因\",\r\n                \"電影\",\r\n                \"感情\"\r\n            ]\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://calm-tor-51704.herokuapp.com/posts/62652b96bfb6101bb1aabcf6",
+					"protocol": "http",
+					"host": [
+						"calm-tor-51704",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"62652b96bfb6101bb1aabcf6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新單筆代辦",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"今天要@@xx............\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://morning-tundra-18340.herokuapp.com/todos/62652b43bfb6101bb1aabcf0",
+					"protocol": "http",
+					"host": [
+						"morning-tundra-18340",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos",
+						"62652b43bfb6101bb1aabcf0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
